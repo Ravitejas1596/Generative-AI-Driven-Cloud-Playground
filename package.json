@@ -1,0 +1,37 @@
+{
+  "name": "generative-ai-cloud-playground",
+  "version": "1.0.0",
+  "description": "AI-Driven Cloud Infrastructure Playground with automated deployment and GenAI support",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "test": "cd server && npm test && cd ../client && npm test",
+    "lint": "cd server && npm run lint && cd ../client && npm run lint"
+  },
+  "keywords": [
+    "generative-ai",
+    "cloud-infrastructure",
+    "aws",
+    "gcp",
+    "azure",
+    "terraform",
+    "kubernetes",
+    "docker",
+    "react",
+    "nodejs",
+    "openai",
+    "infrastructure-as-code"
+  ],
+  "author": "Jack Sparrow",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
